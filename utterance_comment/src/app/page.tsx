@@ -1,3 +1,4 @@
+"use client";
 import Comments from './comments';
 
 export default function Home() {

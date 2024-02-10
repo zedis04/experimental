@@ -1,5 +1,5 @@
 "use client";
-import Comments from './comments.js';
+import Comments from './comments';
 
 export default function Home() {
   return (

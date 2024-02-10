@@ -1,11 +1,7 @@
-import React, { Component, RefObject } from 'react';
+import React, { Component } from 'react'
 
-interface CommentsProps {}
-
-class Comments extends Component<CommentsProps> {
-    private commentBox: RefObject<HTMLDivElement>;
-
-    constructor(props: CommentsProps) {
+export default class Comments extends Component {
+    constructor(props) {
         super(props);
         this.commentBox = React.createRef();
     }
@@ -14,13 +10,11 @@ class Comments extends Component<CommentsProps> {
         let scriptEl = document.createElement("script");
         scriptEl.setAttribute("src", "https://utteranc.es/client.js")
         scriptEl.setAttribute("crossorigin", "anonymous")
-        scriptEl.setAttribute("async", "true")
-        scriptEl.setAttribute("repo", "bjcarlson42/youtube-utterance-comments")
+        scriptEl.setAttribute("async", true)
+        scriptEl.setAttribute("repo", "zedis04/utterance_comment")
         scriptEl.setAttribute("issue-term", "title")
         scriptEl.setAttribute("theme", "github-light")
-        if (this.commentBox.current) {
-            this.commentBox.current.appendChild(scriptEl);
-        }
+        this.commentBox.current.appendChild(scriptEl)
     }
 
     render() {
@@ -28,8 +22,6 @@ class Comments extends Component<CommentsProps> {
             <div style={{ width: '100%' }} id="comments">
                 <div ref={this.commentBox}></div>
             </div>
-        );
+        )
     }
 }
-
-export default Comments;

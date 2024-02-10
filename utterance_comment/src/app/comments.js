@@ -11,7 +11,7 @@ export default class Comments extends Component {
         scriptEl.setAttribute("src", "https://utteranc.es/client.js")
         scriptEl.setAttribute("crossorigin", "anonymous")
         scriptEl.setAttribute("async", true)
-        scriptEl.setAttribute("repo", "zedis04/utterance_comment")
+        scriptEl.setAttribute("repo", "zedis04/experimental")
         scriptEl.setAttribute("issue-term", "title")
         scriptEl.setAttribute("theme", "github-light")
         this.commentBox.current.appendChild(scriptEl)
